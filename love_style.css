@@ -1,0 +1,150 @@
+/* --- 全局与字体设定 --- */
+body {
+    margin: 0;
+    /* 使用思源宋体和系统无衬线字体结合，典雅且易读 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    /* 柔和的奶油白背景，代替纯白 */
+    background-color: #fdfaf6; 
+    /* 温和的深棕色文字，代替纯黑 */
+    color: #5c524f;
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* --- 充满回忆感的头部 --- */
+.site-header {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+    border-bottom: 2px solid #e0dace;
+}
+
+.site-header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4a403d;
+    margin: 0;
+}
+
+.site-header p {
+    font-size: 1.1rem;
+    color: #8c7b75;
+    margin-top: 10px;
+    font-style: italic; /* 斜体增添文艺感 */
+}
+
+/* --- 相册分类区域 --- */
+.gallery-section {
+    margin-bottom: 70px;
+}
+
+/* --- 分类标题的装饰 --- */
+.section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #4a403d;
+    margin-bottom: 50px;
+    position: relative;
+}
+/* 标题两边的装饰性花纹 */
+.section-title::before,
+.section-title::after {
+    content: '·'; /* 您也可以换成 '◇' 或其他符号 */
+    font-size: 1.5rem;
+    color: #c9b8b1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.section-title::before {
+    left: calc(50% - 100px); /* 调整位置 */
+}
+.section-title::after {
+    right: calc(50% - 100px); /* 调整位置 */
+}
+
+/* --- 照片网格布局 --- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+/* --- 精心设计的照片卡片 --- */
+.photo-card {
+    background: #fff;
+    /* 使用柔和的阴影，营造照片浮起的感觉 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border-radius: 4px; /* 小圆角 */
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid #f0e9e4;
+}
+
+/* 鼠标悬浮时，照片轻微旋转并上浮，更有动感 */
+.photo-card:hover {
+    transform: translateY(-8px) rotate(1.5deg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    cursor: pointer;
+}
+
+.photo-card .caption {
+    padding: 20px 25px 25px 25px;
+    border-top: 1px solid #f0e9e4;
+}
+
+.photo-card .caption p {
+    margin: 0 0 15px 0;
+    font-size: 1rem;
+    min-height: 50px; /* 保证描述区域有一定高度 */
+}
+
+.photo-card .caption .date {
+    font-size: 0.85rem;
+    /* 使用柔和的豆沙色作为点缀 */
+    color: #a38a83;
+    font-style: italic;
+}
+
+/* --- 页脚 --- */
+.site-footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #9e8a83;
+    border-top: 1px solid #e0dace;
+    font-size: 1rem;
+    font-family: 'Noto Serif SC', serif;
+}
+
+/* --- 图片放大层样式 (基本不变) --- */
+.lightbox {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(43, 37, 35, 0.92); /* 使用深棕色半透明背景 */
+    display: none; justify-content: center; align-items: center; z-index: 1000;
+    animation: fadeIn 0.4s ease;
+}
+.lightbox-content {
+    max-width: 90vw; max-height: 85vh; object-fit: contain;
+    animation: zoomIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.close-button {
+    position: absolute; top: 20px; right: 35px;
+    font-size: 45px; color: #fff; cursor: pointer; transition: transform 0.2s;
+}
+.close-button:hover { transform: scale(1.2); }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoomIn { from { transform: scale(0.8); } to { transform: scale(1); } }
