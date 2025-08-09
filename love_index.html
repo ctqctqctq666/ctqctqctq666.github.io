@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的幸福回忆录</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>我们的幸福回忆录</h1>
+        <p>时光荏苒，唯爱永恒</p>
+    </header>
+
+    <main class="container">
+
+        <section id="upuntilxiaoyueis23" class="gallery-section">
+            <h2 class="section-title">23岁之前</h2>
+            <div class="photo-grid">
+                
+                <div class="photo-card">
+                    <img src="photos/before-23/photo1.jpg" alt="青涩时光的我们" onclick="openLightbox(this)">
+                    <div class="caption">
+                        <p>还记得那个夏天吗？一切故事开始的地方。</p>
+                        <span class="date">很久以前的某一天</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="year-2025" class="gallery-section">
+            <h2 class="section-title">2025年</h2>
+            <div class="photo-grid">
+
+                <div class="photo-card">
+                    <img src="photos/2025/image1.jpg" alt="2025年的某个瞬间" onclick="openLightbox(this)">
+                    <div class="caption">
+                        <p>新的一年，新的故事，不变的是身边的你。</p>
+                        <span class="date">2025-01-01</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="year-2026" class="gallery-section">
+            <h2 class="section-title">2026年</h2>
+            <div class="photo-grid">
+                
+                </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>Love is an endless memory ∞</p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-button">&times;</span>
+        <img class="lightbox-content" id="lightbox-image">
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
