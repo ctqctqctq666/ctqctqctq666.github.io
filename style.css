@@ -148,3 +148,26 @@ body {
 .close-button:hover { transform: scale(1.2); }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes zoomIn { from { transform: scale(0.8); } to { transform: scale(1); } }
+
+/* --- 新增的引言文字样式 --- */
+.intro-text {
+    max-width: 650px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #e0dace;
+    border-bottom: 1px solid #e0dace;
+    display: block; /* 确保居中生效 */
+}
+
+.intro-text p {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 1.2rem;
+    color: #8c7b75;
+    margin: 0;
+    line-height: 2;
+}
+
